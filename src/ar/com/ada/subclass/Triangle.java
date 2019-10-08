@@ -5,26 +5,26 @@ import ar.com.ada.figure.Figure;
 import java.util.Objects;
 
 public class Triangle extends Figure {
-    private Double base;
+    private Double widthT;
     private Double height;
 
   public Triangle (){}
 
   public Triangle (Double base, Double height) {
-      this.base = base;
+      this.widthT = base;
       this.height = height;
   }
 
-    public double getBase() {
-        return this.base;
+    public double getWidthT() {
+        return this.widthT;
     }
 
     public double getHeight() {
         return this.height;
     }
 
-    public void setBase(double base) {
-        this.base = base;
+    public void setWidthT(double widthT) {
+        this.widthT = widthT;
     }
 
     public void setHeight(double height) {
@@ -32,19 +32,19 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public double calcularArea() {
-       area = (base*height)/ 2;
+    public double calculateArea() {
+       area = (widthT *height)/ 2;
        return area;
     }
 
     @Override
     public String toString() {
-        return "Triangle: [base = " + base + " , height = " + height+ " , area = "+area + "]";
+        return "Triangle: [base = " + widthT + " , height = " + height+ " , area = "+area + "]";
     }
 
     @Override
     public int hashCode() {
-        return -12 * Objects.hash(this.base, this.height);
+        return -12 * Objects.hash(this.widthT, this.height);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Triangle extends Figure {
 
         //verificar los estados de los atrr
         return super.equals(that) &&
-                base.equals(that.height) &&
+                widthT.equals(that.height) &&
                 height.equals(that.height);
     }
 }

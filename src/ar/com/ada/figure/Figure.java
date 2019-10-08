@@ -5,7 +5,13 @@ import java.util.Objects;
 public abstract class Figure {
     protected  Double area;
 
-    public abstract double calcularArea ();
+    public Figure(){}
+
+    public Figure(double area){
+        this.area = area;
+    }
+
+    public abstract double calculateArea();
 
     public double getArea() {
         return area;

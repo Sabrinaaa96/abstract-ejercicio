@@ -28,8 +28,9 @@ public class Circle extends Figure {
         this.radio = radio;
     }
 
+    //implementación
     @Override
-    public double calcularArea() {
+    public double calculateArea() {
         return this.area = pi * radio * radio;
     }
 

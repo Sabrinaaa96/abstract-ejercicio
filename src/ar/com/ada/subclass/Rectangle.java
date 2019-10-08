@@ -6,46 +6,48 @@ import java.util.Objects;
 
 public class Rectangle extends Figure {
 
-    private Double base;
+    private Double widthR;
     private Double height;
 
     public Rectangle() {}
 
-    public Rectangle(Double base, Double height) {
-        this.base = base;
+    public Rectangle(Double widthR, Double height) {
+        this.widthR = widthR;
         this.height = height;
     }
 
-    public double getBase() {
-        return base;
+    public double getWidthR() {
+        return widthR;
     }
 
     public double getHeight() {
         return height;
     }
 
-    public void setBase(double base) {
-        this.base = base;
+    public void setWidthR(double widthR) {
+        this.widthR = widthR;
     }
 
     public void setHeight(double height) {
         this.height = height;
     }
 
+    // implementacion
+
     @Override
-    public double calcularArea(){
-        area = base * height;
+    public double calculateArea(){
+        area = widthR * height;
         return area;
     }
 
     @Override
     public String toString() {
-        return "Rectangle: [base = " + base + " , height = " + height + " ,  area = " + area+ " ]";
+        return "Rectangle: [base = " + widthR + " , height = " + height + " ,  area = " + area+ " ]";
     }
 
     @Override
     public int hashCode() {
-        return -12 * Objects.hash(this.base, this.height);
+        return -12 * Objects.hash(this.widthR, this.height);
     }
 
     @Override
@@ -60,7 +62,7 @@ public class Rectangle extends Figure {
         //castear la clase
         Rectangle that = (Rectangle) obj;
         return super.equals(that) &&
-                this.base.equals(that.base) &&
+                this.widthR.equals(that.widthR) &&
                 this.height.equals(that.height);
     }
 }
